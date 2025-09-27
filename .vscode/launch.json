@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AdminserviceApplication",
+            "request": "launch",
+            "mainClass": "com.adminservice.AdminserviceApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-EurekaserverApplication<eurekaserver>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
@@ -39,6 +45,17 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.configserver.ConfigserverApplication",
             "projectName": "configserver",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=53340 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=configserver"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-AdminserviceApplication<adminservice>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.adminservice.AdminserviceApplication",
+            "projectName": "adminservice",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }

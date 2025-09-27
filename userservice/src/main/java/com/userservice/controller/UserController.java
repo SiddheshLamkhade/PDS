@@ -1,13 +1,11 @@
 package com.userservice.controller;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.userservice.service.CitizenService;
 import com.userservice.service.DealerService;
 import com.userservice.dto.DealerRequest;
 import com.userservice.dto.CitizenRequest;
 import com.userservice.model.Dealer;
 import com.userservice.model.Citizen;
-
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
