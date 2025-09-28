@@ -77,5 +77,15 @@ public class UserController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    //to get dealer by id
+    @GetMapping("/dealers/{dealerId}")
+    public ResponseEntity<?> getDealerById(@PathVariable Long dealerId) {
+        Dealer dealer = dealerService.findById(dealerId);
+        if (dealer == null) {
+            return ResponseEntity.notFound().build();
+        }
+        return ResponseEntity.ok(dealer);
+    }
 }
 
