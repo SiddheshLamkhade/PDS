@@ -3,6 +3,7 @@ package com.adminservice.controller;
 import java.net.URI;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +29,7 @@ public class CommodityController {
     }
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')") // Only users with ADMIN role can create commodities  
     public ResponseEntity<List<Commodity>> list() {
         return ResponseEntity.ok(service.listAll());
     }

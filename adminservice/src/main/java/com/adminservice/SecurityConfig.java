@@ -1,5 +1,4 @@
 package com.adminservice;
-
 //import javax.sql.DataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +22,8 @@ public class SecurityConfig {
     http.authorizeHttpRequests(requests -> requests
         .anyRequest().permitAll())
             .httpBasic(Customizer.withDefaults())
-            .csrf(csrf -> csrf.disable());
+            .csrf(csrf -> csrf.disable())
+            .cors(Customizer.withDefaults());  // Enable CORS
 
         return http.build();
     }
