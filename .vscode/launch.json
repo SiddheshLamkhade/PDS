@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MainappApplication",
+            "request": "launch",
+            "mainClass": "com.mainapp.MainappApplication"
+        },
+        {
+            "type": "java",
             "name": "AdminserviceApplication",
             "request": "launch",
             "mainClass": "com.adminservice.AdminserviceApplication"
@@ -36,7 +42,8 @@
             "mainClass": "com.gateway.GatewayApplication",
             "projectName": "gateway",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=51089 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=gateway"
         },
         {
             "type": "java",
@@ -56,6 +63,16 @@
             "cwd": "${workspaceFolder}",
             "mainClass": "com.adminservice.AdminserviceApplication",
             "projectName": "adminservice",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MainappApplication<mainapp>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.mainapp.MainappApplication",
+            "projectName": "mainapp",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
         }
