@@ -1,0 +1,151 @@
+/* ---------- Background Section ---------- */
+.home-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 80px); /* adjust for navbar height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle overlay for clarity */
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: 150px;
+  /* background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(3px); */
+  z-index: 0;
+}
+
+/* ---------- Center Box ---------- */
+.home-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 60px 60px;
+  max-width: 850px;
+  width: 90%;
+  margin: 0 auto;
+  border-top: 6px solid #0b3d91;
+  transform: translateY(-20px); /* small upward shift for perfect centering */
+}
+
+/* ---------- Typography ---------- */
+.home-title {
+  color: #0b3d91;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.home-subheading {
+  color: #2c2c2c;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.home-subtitle {
+  color: #333;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 35px;
+  padding: 0 15px;
+}
+
+/* ---------- Buttons ---------- */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.home-btn {
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  min-width: 160px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Primary Button */
+.primary-btn {
+  background-color: #0b3d91;
+  color: white;
+  border: 1px solid #0b3d91;
+}
+
+.primary-btn:hover {
+  background-color: #002f6c;
+}
+
+/* Secondary Button */
+.secondary-btn {
+  background-color: white;
+  color: #0b3d91;
+  border: 2px solid #0b3d91;
+}
+
+.secondary-btn:hover {
+  background-color: #e3f2fd;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 992px) {
+  .home-content {
+    padding: 50px 40px;
+    max-width: 700px;
+  }
+
+  .home-title {
+    font-size: 2.3rem;
+  }
+
+  .home-subheading {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-content {
+    padding: 35px 20px;
+    width: 90%;
+  }
+
+  .home-title {
+    font-size: 1.9rem;
+  }
+
+  .home-subheading {
+    font-size: 1rem;
+  }
+
+  .home-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .home-btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

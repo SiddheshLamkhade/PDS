@@ -9,10 +9,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @EnableConfigServer
 @EnableDiscoveryClient
 public class ConfigserverApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ConfigserverApplication.class, args);
 		System.out.println("Config Server has been started on port 8888....");
 	}
-
 }
