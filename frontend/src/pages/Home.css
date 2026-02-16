@@ -1,151 +1,621 @@
-/* ---------- Background Section ---------- */
-.home-background {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: calc(100vh - 80px); /* adjust for navbar height */
+/* Government Header Styles */
+.govt-header {
+  background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 50%, #138808 100%);
+  padding: 10px 0;
+  border-bottom: 3px solid #000080;
+}
+
+.govt-header-content {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-family: "Poppins", sans-serif;
+  gap: 20px;
+}
+
+.govt-emblem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.emblem-circle {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #000080;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.ashoka-chakra {
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(circle, #000080 30%, transparent 30%);
+  border: 2px solid #000080;
+  border-radius: 50%;
+  position: relative;
+}
+
+.ashoka-chakra::before {
+  content: '⚙';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: #000080;
+}
+
+.govt-info h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #8B0000;
+  margin: 0;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.govt-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000080;
+  margin: 4px 0;
+}
+
+.govt-info p {
+  font-size: 13px;
+  color: #333;
+  margin: 2px 0 0;
+  font-weight: 500;
+}
+
+.digital-india {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+.digital-badge, .maha-badge {
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #000080, #1e3a8a);
+  color: white;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.maha-badge {
+  background: linear-gradient(135deg, #8B0000, #DC143C);
+}
+
+.logo-marathi {
+  display: block;
+  font-size: 14px;
+  color: #FF9933;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.logo-english {
+  display: block;
+  font-size: 12px;
+  color: white;
+}
+
+.govt-logo {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.govt-tagline {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+  padding: 16px 24px;
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 4px solid #FF9933;
+  border-right: 4px solid #138808;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tagline-marathi {
+  font-size: 20px;
+  font-weight: 700;
+  color: #8B0000;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.tagline-separator {
+  font-size: 24px;
+  color: #000080;
+  font-weight: 300;
+}
+
+.tagline-english {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000080;
+}
+
+.govt-footer {
+  background: linear-gradient(135deg, #000080 0%, #1e3a8a 100%);
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, #FF9933 0%, #FFFFFF 50%, #138808 100%) 1;
+}
+
+.footer-govt-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-badges {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge-separator {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.badge-item {
+  white-space: nowrap;
+}
+
+/* Home Page Styles */
+.home-page {
+  min-height: 100vh;
+  background: white;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, #000080 0%, #1e40af 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 12px 0;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+}
+
+.govt-logo-img {
+  height: 50px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.logo-marathi-nav {
+  font-size: 16px;
+  font-weight: 700;
+  color: #FFD700;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  line-height: 1;
+}
+
+.logo-english-nav {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 30%, #138808 100%);
+  color: #000080;
+  padding: 80px 0;
   position: relative;
   overflow: hidden;
 }
 
-/* Subtle overlay for clarity */
-.home-overlay {
+.hero::before {
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  margin-top: 150px;
-  /* background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(3px); */
-  z-index: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(0,0,128,0.03)"/></svg>');
+  animation: drift 60s linear infinite;
 }
 
-/* ---------- Center Box ---------- */
-.home-content {
+.hero-content {
   position: relative;
-  z-index: 1;
   text-align: center;
-  background: rgba(255, 255, 255, 0.88);
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  padding: 60px 60px;
-  max-width: 850px;
-  width: 90%;
+  max-width: 900px;
   margin: 0 auto;
-  border-top: 6px solid #0b3d91;
-  transform: translateY(-20px); /* small upward shift for perfect centering */
 }
 
-/* ---------- Typography ---------- */
-.home-title {
-  color: #0b3d91;
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
+.hero-title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  animation: fadeIn 0.8s ease;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.home-subheading {
-  color: #2c2c2c;
-  font-size: 1.3rem;
+.gradient-text {
+  display: block;
+  color: #8B0000;
+  margin-top: 8px;
+  font-size: 42px;
+}
+
+.hero-subtitle {
+  font-size: 20px;
+  opacity: 0.95;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  animation: fadeIn 1s ease 0.2s backwards;
+  color: #1e3a8a;
   font-weight: 600;
-  font-style: italic;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 60px;
+  animation: fadeIn 1.2s ease 0.4s backwards;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  animation: fadeIn 1.4s ease 0.6s backwards;
+}
+
+.stat-item h3 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.stat-item p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* Features Section */
+.features {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--dark);
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: var(--text-light);
+  margin-bottom: 60px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  color: white;
+}
+
+.feature-icon.primary { background: linear-gradient(135deg, #667eea, #764ba2); }
+.feature-icon.success { background: linear-gradient(135deg, #10b981, #059669); }
+.feature-icon.warning { background: linear-gradient(135deg, #f59e0b, #d97706); }
+.feature-icon.info { background: linear-gradient(135deg, #06b6d4, #0891b2); }
+.feature-icon.danger { background: linear-gradient(135deg, #ef4444, #dc2626); }
+.feature-icon.secondary { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+
+.feature-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Portals Section */
+.portals {
+  padding: 100px 0;
+  background: white;
+}
+
+.portals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.portal-card {
+  background: white;
+  border-radius: 20px;
+  padding: 48px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  border: 3px solid transparent;
+  text-align: center;
+}
+
+.portal-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.portal-card.citizen { border-color: #3b82f6; }
+.portal-card.dealer { border-color: #10b981; }
+.portal-card.admin { border-color: #8b5cf6; }
+
+.portal-icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  color: white;
+}
+
+.portal-card.citizen .portal-icon { background: linear-gradient(135deg, #3b82f6, #2563eb); }
+.portal-card.dealer .portal-icon { background: linear-gradient(135deg, #10b981, #059669); }
+.portal-card.admin .portal-icon { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
+
+.portal-card h3 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 24px;
+  color: var(--dark);
+}
+
+.portal-features {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.portal-features li {
+  padding: 12px 0;
+  font-size: 16px;
+  color: var(--text);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.portal-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: var(--dark);
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.portal-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Problems Solved */
+.problems-solved {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e7f3ff 100%);
+}
+
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.problem-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.problem-before, .problem-after {
+  padding: 16px 0;
+}
+
+.problem-before h4 {
+  color: #ef4444;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.problem-after h4 {
+  color: #10b981;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.problem-before p, .problem-after p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #FF9933 0%, #FFFFFF 30%, #138808 100%);
+  color: #000080;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #8B0000;
+  font-family: 'Noto Sans Devanagari', sans-serif;
+}
+
+.cta p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(135deg, #000080 0%, #1e3a8a 100%);
+  color: white;
+  padding: 60px 0 20px;
+  border-top: 4px solid;
+  border-image: linear-gradient(90deg, #FF9933 0%, #FFFFFF 50%, #138808 100%) 1;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h4 {
+  font-size: 18px;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 
-.home-subtitle {
-  color: #333;
-  font-size: 1.05rem;
-  font-weight: 400;
-  line-height: 1.6;
-  margin-bottom: 35px;
-  padding: 0 15px;
-}
-
-/* ---------- Buttons ---------- */
-.home-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-.home-btn {
+.footer-section a {
+  display: block;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
-  padding: 12px 32px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 16px;
-  transition: all 0.3s ease;
-  min-width: 160px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
 }
 
-/* Primary Button */
-.primary-btn {
-  background-color: #0b3d91;
+.footer-section a:hover {
   color: white;
-  border: 1px solid #0b3d91;
 }
 
-.primary-btn:hover {
-  background-color: #002f6c;
+.footer-bottom {
+  border-top: 1px solid rgba(255, 153, 51, 0.2);
+  padding-top: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-/* Secondary Button */
-.secondary-btn {
-  background-color: white;
-  color: #0b3d91;
-  border: 2px solid #0b3d91;
-}
-
-.secondary-btn:hover {
-  background-color: #e3f2fd;
-}
-
-/* ---------- Responsive Design ---------- */
-@media (max-width: 992px) {
-  .home-content {
-    padding: 50px 40px;
-    max-width: 700px;
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
   }
-
-  .home-title {
-    font-size: 2.3rem;
+  
+  .hero-subtitle {
+    font-size: 16px;
   }
-
-  .home-subheading {
-    font-size: 1.1rem;
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
   }
-}
-
-@media (max-width: 600px) {
-  .home-content {
-    padding: 35px 20px;
-    width: 90%;
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 30px;
   }
-
-  .home-title {
-    font-size: 1.9rem;
+  
+  .section-title {
+    font-size: 32px;
   }
-
-  .home-subheading {
-    font-size: 1rem;
+  
+  .features-grid, .portals-grid, .problems-grid {
+    grid-template-columns: 1fr;
   }
-
-  .home-subtitle {
-    font-size: 0.95rem;
-  }
-
-  .home-btn {
-    font-size: 14px;
-    padding: 10px 20px;
+  
+  .nav-links {
+    flex-direction: column;
+    gap: 8px;
   }
 }
